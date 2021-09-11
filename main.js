@@ -21,3 +21,58 @@ function uploadBackground(){
 function uploadrover(){
     ctx.drawImage(rover_imgTag,rover_x,rover_y,rover.width,rover.height);
 }
+window.addEventListener("keydown",my_keydown);
+function my_keydown(e)
+{
+ keyPressed=e.keyCode;
+    if(keyPressed=='38')
+        {
+            up();
+        }
+    if(keyPressed=='40')
+        {
+            down();
+        }
+    if(keyPressed=='37')
+        {
+            left();
+        }
+    if(keyPressed=='39')
+        {
+            right();
+        }
+}
+function up()
+{
+    if(rover_y>=0)
+        {
+            rover_y=rover_y-10;
+            uploadBackground();
+            uploadrover();
+        }
+}
+function  down()
+{
+    if(rover_y<=500)
+        {
+            rover_y=rover_y+10;
+            uploadBackground();
+            uploadrover();
+        }
+    function  left()
+{
+    if(rover_x>=0)
+        {
+            rover_x=rover_x-10;
+            uploadBackground();
+            uploadrover();
+        }
+    function  right()
+{
+    if(rover_x<=700)
+        {
+            rover_x=rover_x+10;
+            uploadBackground();
+            uploadrover();
+        }
+}
