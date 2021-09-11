@@ -19,7 +19,7 @@ function uploadBackground(){
     ctx.drawImage(background_imgTag,0,0,canvas.width,canvas.height);
 }
 function uploadrover(){
-    ctx.drawImage(rover_imgTag,rover_x,rover_y,rover.width,rover.height);
+    ctx.drawImage(rover_imgTag,rover_x,rover_y,rover_width,rover_height);
 }
 window.addEventListener("keydown",my_keydown);
 function my_keydown(e)
@@ -67,6 +67,7 @@ function  down()
             uploadBackground();
             uploadrover();
         }
+}
     function  right()
 {
     if(rover_x<=700)
